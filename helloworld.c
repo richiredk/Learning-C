@@ -17,25 +17,48 @@ The problem: Compile the program (as shown below) in terminal. There is warning 
 
 Modifications to the first C program are necessary. 
 The Modification to implement, in order to make it work (compile/run), is to add the (reserved) word "int".
-*/
-
-/* 
+ 
 After implementing the modification the program compile and run:
-
 	$ gcc helloworld.c -o helloworld
 	$ ./helloworld
 	$ Hello, world
 	$
-
 */
 
 /*
 This is a modification of the first C programm helloworld.c
-The modification is meant to find another way to add a newline character into the printf
-function.
-As a result of the experiment, the C compiler will print unfriendly diagnostics about missing
-quotes
+The modification is meant to find another way to add a newline character into the printf function.
+As a result of the experiment, the C compiler will print unfriendly diagnostics about missing quotes (as shown bellow):
+	$ gcc helloworld2.c -o helloworld2
+	helloworld2.c: In function ‘main’:
+	helloworld2.c:28:16: warning: missing terminating " character
+	   28 |         printf("Hello, world
+	      |                ^
+	helloworld2.c:28:16: error: missing terminating " character
+	   28 |         printf("Hello, world
+	      |                ^~~~~~~~~~~~~
+	helloworld2.c:29:17: warning: missing terminating " character
+	   29 |                 ");
+	      |                 ^
+	helloworld2.c:29:17: error: missing terminating " character
+	   29 |                 ");
+	      |                 ^~~
+	helloworld2.c:30:1: error: expected expression before ‘}’ token
+	   30 | }
+	      | ^
+	helloworld2.c:28:16: error: expected ‘;’ before ‘}’ token
+	   28 |         printf("Hello, world
+	      |                ^
+	      |                ;
+	   29 |                 ");
+	   30 | }
+	      | ~   
 
+*/
+
+
+/*
+This is the C program that compile and run without errors/warnings:
 	#include <stdio.h>
 	int main()
 	{
@@ -49,4 +72,3 @@ int main()
 	printf("Hello, world
 	       ");
 }
-
