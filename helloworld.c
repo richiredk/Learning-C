@@ -8,13 +8,13 @@ Thank you all.
 
 /*
 This is the first C program in the book which is the classic "hello world". This first program witll not work (compile/run) in my linux desktop,in which I am running ubuntu 24.04.2 LTS, because the standard is too old. 
-Modifications are necessary. 
+Modifications to the first C program are necessary. 
+The Modification to implement, in order to make it work (compile/run), is to add the (reserved) word "int".
 */
 
 #include <stdio.h>
-main()
+int main()
 {
-
 	printf("Hello, world\n");
 }
 
