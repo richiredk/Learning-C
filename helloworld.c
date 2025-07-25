@@ -28,6 +28,13 @@ After implementing the modification the program compile and run:
 /*
 This is a modification of the first C programm helloworld.c
 The modification is meant to find another way to add a newline character into the printf function.
+	#include <stdio.h>
+	int main()
+	{
+	        printf("Hello, world
+	               ");
+	} 
+
 As a result of the experiment, the C compiler will print unfriendly diagnostics about missing quotes (as shown bellow):
 	$ gcc helloworld2.c -o helloworld2
 	helloworld2.c: In function ‘main’:
@@ -66,9 +73,16 @@ This is the C program that compile and run without errors/warnings:
 	}
 */
 
+/* 
+This is a modification of the first C programm helloworld.c
+The modifications are inside the braces {}, in which the program will have three printf functions.
+
+*/
+
 #include <stdio.h>
 int main()
 {
-	printf("Hello, world
-	       ");
+	printf("Hello, ");
+	printf("world");
+	printf("\n");
 }
