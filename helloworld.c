@@ -9,7 +9,8 @@ Thank you all.
 /*
 This is the first C program in the book which is the classic "hello world". This first program witll not work (compile) in my linux desktop,
 in which I am running ubuntu 24.04.2 LTS, because the standard is too old. 
-The problem: I try to compile (as shown below) in terminal. There is warning in the output:
+The problem: Compile the program (as shown below) in terminal. There is warning in the output:
+
 	$ gcc helloworld.c -o helloworld
 	  helloworld.c:15:1 warning: return type defaults to 'int' [-Winplicit-int]
 		15 | main()
@@ -18,9 +19,34 @@ Modifications to the first C program are necessary.
 The Modification to implement, in order to make it work (compile/run), is to add the (reserved) word "int".
 */
 
+/* 
+After implementing the modification the program compile and run:
+
+	$ gcc helloworld.c -o helloworld
+	$ ./helloworld
+	$ Hello, world
+	$
+
+*/
+
+/*
+This is a modification of the first C programm helloworld.c
+The modification is meant to find another way to add a newline character into the printf
+function.
+As a result of the experiment, the C compiler will print unfriendly diagnostics about missing
+quotes
+
+	#include <stdio.h>
+	int main()
+	{
+		printf("Hello, world\n");
+	}
+*/
+
 #include <stdio.h>
 int main()
 {
-	printf("Hello, world\n");
+	printf("Hello, world
+	       ");
 }
 
