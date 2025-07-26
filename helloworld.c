@@ -76,12 +76,11 @@ This is the C program that compile and run without errors/warnings:
 /* 
 This is a modification of the first C programm helloworld.c
 The modifications are inside the braces {}, in which the program will be practicing the use of escape sequences of:
-\b (backspace) Moves the active position on the current line. It transfers the cursor one character back. If the 
-active position is at the initial position of a line, the behavior of the display device is unspecified.
+\f (form feed) Moves the active position to the initial position at the start of the next logical page.
 */
 
 #include <stdio.h>
 int main()
 {
-	printf("Hello,\b\b\b\b\b\bHello, world\n");
+	printf("Hello, world\f");
 }
