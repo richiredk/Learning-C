@@ -76,11 +76,11 @@ This is the C program that compile and run without errors/warnings:
 /* 
 This is a modification of the first C programm helloworld.c
 The modifications are inside the braces {}, in which the program will be practicing the use of escape sequences of:
-\'(single quota) It is a simple escape sequence. It put single quotas.
+\" (double quota) It is a simple escape sequence. It put double quotas.
 */
 
 #include <stdio.h>
 int main()
 {
-	printf("\'Hello, World\'\n");
+	printf("\"Hello, World\"\n");
 }
