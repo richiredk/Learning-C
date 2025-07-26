@@ -76,13 +76,13 @@ This is the C program that compile and run without errors/warnings:
 /* 
 This is a modification of the first C programm helloworld.c
 The modifications are inside the braces {}, in which the program will be practicing the use of escape sequences of:
-\t (horizontal tab)  Moves the active position to the next horizontal tabulation position on the current line.
-                     If the active position is at or past the last defined horizontal tabulation position, the
-		     behavior of the display device is unspecified
+\v (vertical tab) Moves the active position to the initial position of the next vertical tabulation position.
+                  If the active position is at or past the last defined vertical tabulation position, the
+                  behavior of the display device is unspecified
 */
 
 #include <stdio.h>
 int main()
 {
-	printf("\tHello,\t\tWorld\n\t");
+	printf("\vHello,\v\vWorld\n\v\v");
 }
