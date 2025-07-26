@@ -76,13 +76,11 @@ This is the C program that compile and run without errors/warnings:
 /* 
 This is a modification of the first C programm helloworld.c
 The modifications are inside the braces {}, in which the program will be practicing the use of escape sequences of:
-\v (vertical tab) Moves the active position to the initial position of the next vertical tabulation position.
-                  If the active position is at or past the last defined vertical tabulation position, the
-                  behavior of the display device is unspecified
+\'(single quota) It is a simple escape sequence. It put single quotas.
 */
 
 #include <stdio.h>
 int main()
 {
-	printf("\vHello,\v\vWorld\n\v\v");
+	printf("\'Hello, World\'\n");
 }
