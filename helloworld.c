@@ -82,5 +82,5 @@ The modifications are inside the braces {}, in which the program will be practic
 #include <stdio.h>
 int main()
 {
-	printf("Hello, world\f");
+	printf("Hello,\fworld\f\n");
 }
