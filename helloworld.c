@@ -76,11 +76,11 @@ This is the C program that compile and run without errors/warnings:
 /* 
 This is a modification of the first C programm helloworld.c
 The modifications are inside the braces {}, in which the program will be practicing the use of escape sequences of:
-\f (form feed) Moves the active position to the initial position at the start of the next logical page.
+\r (carriage return) Moves the active position to the initial position of the current line.
 */
 
 #include <stdio.h>
 int main()
 {
-	printf("Hello,\fworld\f\n");
+	printf("Hello,\rHi\rThere there World\n");
 }
