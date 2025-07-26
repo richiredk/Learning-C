@@ -35,7 +35,7 @@ The modification is meant to find another way to add a newline character into th
 	               ");
 	} 
 
-As a result of the experiment, the C compiler will print unfriendly diagnostics about missing quotes (as shown bellow):
+As a result of the experiment, the C compiler will print unfriendly diagnostics about missing quotes (as shown bellow): 
 	$ gcc helloworld2.c -o helloworld2
 	helloworld2.c: In function ‘main’:
 	helloworld2.c:28:16: warning: missing terminating " character
@@ -76,11 +76,23 @@ This is the C program that compile and run without errors/warnings:
 /* 
 This is a modification of the first C programm helloworld.c
 The modifications are inside the braces {}, in which the program will be practicing the use of escape sequences of:
-\\ (backslash) It is used to insert backslash character.
+\x In which x is some character not listed or used before.
+
+As a result of the experiment, the C compiler will print warnings (as shown bellow): 
+	$ gcc helloworld14.c -o helloworld14
+	helloworld14.c: In function ‘main’:
+	helloworld14.c:10:42: warning: unknown escape sequence: '\c'
+	   10 |       printf("\c\dHello\e,\gWorld \h\i\j\n");
+	      |                                          ^
+	helloworld14.c:10:42: warning: unknown escape sequence: '\d'
+	helloworld14.c:10:42: warning: unknown escape sequence: '\g'
+	helloworld14.c:10:42: warning: unknown escape sequence: '\h'
+	helloworld14.c:10:42: warning: unknown escape sequence: '\i'
+	helloworld14.c:10:42: warning: unknown escape sequence: '\j'
 */
 
 #include <stdio.h>
 int main()
 {
-	printf("\\Hello\\, \\World\\\n");
+	printf("\c\dHello\e, \gWorld \h\i\j\n");
 }
