@@ -76,11 +76,13 @@ This is the C program that compile and run without errors/warnings:
 /* 
 This is a modification of the first C programm helloworld.c
 The modifications are inside the braces {}, in which the program will be practicing the use of escape sequences of:
-\r (carriage return) Moves the active position to the initial position of the current line.
+\t (horizontal tab)  Moves the active position to the next horizontal tabulation position on the current line.
+                     If the active position is at or past the last defined horizontal tabulation position, the
+		     behavior of the display device is unspecified
 */
 
 #include <stdio.h>
 int main()
 {
-	printf("Hello,\rHi\rThere there World\n");
+	printf("\tHello,\t\tWorld\n\t");
 }
