@@ -76,11 +76,12 @@ This is the C program that compile and run without errors/warnings:
 /* 
 This is a modification of the first C programm helloworld.c
 The modifications are inside the braces {}, in which the program will be practicing the use of escape sequences of:
-\" (double quota) It is a simple escape sequence. It put double quotas.
+\? (question mark) It is used for the presentation of triagraph. It is used when a literal question mark is necessary
+		   in string or character.
 */
 
 #include <stdio.h>
 int main()
 {
-	printf("\"Hello, World\"\n");
+	printf("Hello, World\?\n");
 }
