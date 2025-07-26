@@ -75,14 +75,12 @@ This is the C program that compile and run without errors/warnings:
 
 /* 
 This is a modification of the first C programm helloworld.c
-The modifications are inside the braces {}, in which the program will have three printf functions.
-
+The modifications are inside the braces {}, in which the program will be practicing the use of escape sequences of:
+\a (alert) Produces an audible or visible alert without changing the active position.
 */
 
 #include <stdio.h>
 int main()
 {
-	printf("Hello, ");
-	printf("world");
-	printf("\n");
+	printf("Hello, \a world\n");
 }
