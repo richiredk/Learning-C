@@ -63,16 +63,6 @@ As a result of the experiment, the C compiler will print unfriendly diagnostics 
 
 */
 
-
-/*
-This is the C program that compile and run without errors/warnings:
-	#include <stdio.h>
-	int main()
-	{
-		printf("Hello, world\n");
-	}
-*/
-
 /* 
 This is a modification of the first C programm helloworld.c
 The modifications are inside the braces {}, in which the program will be practicing the use of escape sequences of:
@@ -89,10 +79,23 @@ As a result of the experiment, the C compiler will print warnings (as shown bell
 	helloworld14.c:10:42: warning: unknown escape sequence: '\h'
 	helloworld14.c:10:42: warning: unknown escape sequence: '\i'
 	helloworld14.c:10:42: warning: unknown escape sequence: '\j'
-*/
 
 #include <stdio.h>
 int main()
 {
 	printf("\c\dHello\e, \gWorld \h\i\j\n");
 }
+*/
+
+
+// This is the C program that compile and run without errors/warnings:
+
+#include <stdio.h>
+int main()
+{
+	printf("Hello, world\n");
+} 
+
+
+
+// I have attached the assembly file helloworld.s
